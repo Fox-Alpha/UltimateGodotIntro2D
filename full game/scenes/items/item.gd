@@ -17,7 +17,7 @@ func _ready():
 		$Sprite2D.modulate = Color(0.1,0.8,0.1)
 		
 	# tween 
-	var target_pos = position + direction * distance
+	var target_pos = global_transform.origin + global_position.direction_to(direction) * (distance + global_position.distance_to(direction))
 	var tween = create_tween()
 	tween.set_parallel(true)
 	tween.tween_property(self,"position",target_pos,0.5)
