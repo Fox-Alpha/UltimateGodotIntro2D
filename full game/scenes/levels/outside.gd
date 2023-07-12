@@ -9,10 +9,10 @@ func _on_gate_player_entered_gate(_body):
 
 func _on_house_player_entered():
 	var tween = get_tree().create_tween()
-	tween.tween_property($Player/Camera2D,"zoom",Vector2(1,1),1).set_trans(Tween.TRANS_QUAD)
+	tween.tween_property(camera,"zoom",Vector2(1,1),1).set_trans(Tween.TRANS_QUAD)
 
 
 func _on_house_player_exited():
 	var tween = get_tree().create_tween()
-	tween.tween_property($Player/Camera2D, "zoom", Vector2(0.6,0.6),2)
+	tween.tween_property(camera, "zoom", Vector2(0.6,0.6),2)
 
