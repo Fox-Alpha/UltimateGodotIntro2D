@@ -18,3 +18,5 @@ script = ExtResource("1_tss84")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_p5086")
+
+[node name="Output" type="Marker2D" parent="."]
