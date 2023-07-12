@@ -9,6 +9,7 @@
 size = Vector2(402, 182)
 
 [node name="Crate" instance=ExtResource("1_cquy0")]
+input_pickable = true
 script = ExtResource("2_l1tc1")
 
 [node name="BaseSprite" parent="." index="0"]
@@ -88,3 +89,23 @@ position = Vector2(151, 0)
 
 [node name="Marker2D23" type="Marker2D" parent="SpawnPositions" index="22"]
 position = Vector2(157, 49)
+
+[node name="Label" type="Label" parent="." index="5"]
+visible = false
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -66.0
+offset_top = -75.0
+offset_right = 59.5
+offset_bottom = 26.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 23
+text = "Press E to open"
+uppercase = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
