@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://8gq4xmdusk7u"]
+[gd_scene load_steps=30 format=3 uid="uid://8gq4xmdusk7u"]
 
 [ext_resource type="PackedScene" uid="uid://c3m26rb78usw2" path="res://scenes/levels/level.tscn" id="1_p3xmu"]
 [ext_resource type="Texture2D" uid="uid://wvnq82hqa0lg" path="res://graphics/ground/stones.png" id="2_ro7fn"]
@@ -19,7 +19,6 @@
 [ext_resource type="Texture2D" uid="uid://4m3281l45m5a" path="res://graphics/objects/infestation/line.png" id="16_rvthq"]
 [ext_resource type="Texture2D" uid="uid://klvxgw1q1kyn" path="res://graphics/objects/infestation/medium.png" id="17_kmy74"]
 [ext_resource type="PackedScene" uid="uid://bmndyctiedbk7" path="res://scenes/container/crate.tscn" id="18_nmy0s"]
-[ext_resource type="PackedScene" uid="uid://chf6py0cwk54c" path="res://scenes/enemies/hunter.tscn" id="19_sydh3"]
 [ext_resource type="PackedScene" uid="uid://dlr0h68iknrq0" path="res://scenes/enemies/scout.tscn" id="20_pgsps"]
 [ext_resource type="PackedScene" uid="uid://dmo7mww653wqy" path="res://scenes/enemies/drone.tscn" id="21_8560s"]
 
@@ -389,37 +388,34 @@ position = Vector2(3543, -42)
 position = Vector2(4311, 1080)
 rotation = 1.5708
 
-[node name="Hunter" parent="Enemies" index="0" instance=ExtResource("19_sydh3")]
-position = Vector2(2976, 2015)
-
-[node name="Scout" parent="Enemies" index="1" instance=ExtResource("20_pgsps")]
+[node name="Scout" parent="Enemies" index="0" instance=ExtResource("20_pgsps")]
 position = Vector2(3957, 869)
 
-[node name="Scout2" parent="Enemies" index="2" instance=ExtResource("20_pgsps")]
+[node name="Scout2" parent="Enemies" index="1" instance=ExtResource("20_pgsps")]
 position = Vector2(3973, 3856)
 
-[node name="Scout3" parent="Enemies" index="3" instance=ExtResource("20_pgsps")]
+[node name="Scout3" parent="Enemies" index="2" instance=ExtResource("20_pgsps")]
 position = Vector2(362, 4693)
 
-[node name="Scout4" parent="Enemies" index="4" instance=ExtResource("20_pgsps")]
+[node name="Scout4" parent="Enemies" index="3" instance=ExtResource("20_pgsps")]
 position = Vector2(639, 4554)
 
-[node name="Scout5" parent="Enemies" index="5" instance=ExtResource("20_pgsps")]
+[node name="Scout5" parent="Enemies" index="4" instance=ExtResource("20_pgsps")]
 position = Vector2(372, 4538)
 
-[node name="Scout6" parent="Enemies" index="6" instance=ExtResource("20_pgsps")]
+[node name="Scout6" parent="Enemies" index="5" instance=ExtResource("20_pgsps")]
 position = Vector2(-1788, 2341)
 
-[node name="Scout7" parent="Enemies" index="7" instance=ExtResource("20_pgsps")]
+[node name="Scout7" parent="Enemies" index="6" instance=ExtResource("20_pgsps")]
 position = Vector2(-2908, 2768)
 
-[node name="Scout8" parent="Enemies" index="8" instance=ExtResource("20_pgsps")]
+[node name="Scout8" parent="Enemies" index="7" instance=ExtResource("20_pgsps")]
 position = Vector2(-1564, 4229)
 
-[node name="Drone" parent="Enemies" index="9" instance=ExtResource("21_8560s")]
+[node name="Drone" parent="Enemies" index="8" instance=ExtResource("21_8560s")]
 position = Vector2(-1685, 475)
 
-[node name="Drone2" parent="Enemies" index="10" instance=ExtResource("21_8560s")]
+[node name="Drone2" parent="Enemies" index="9" instance=ExtResource("21_8560s")]
 position = Vector2(1947, 2267)
 
 [node name="Player" parent="." index="7"]
