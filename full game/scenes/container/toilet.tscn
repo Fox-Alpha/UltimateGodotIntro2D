@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dh34oie7xjtbv"]
+[gd_scene load_steps=7 format=3 uid="uid://dh34oie7xjtbv"]
 
 [ext_resource type="PackedScene" uid="uid://4n5tia6l7uta" path="res://scenes/container/item_container.tscn" id="1_cdxjx"]
 [ext_resource type="Script" path="res://scenes/container/toilet.gd" id="2_elxc5"]
 [ext_resource type="Texture2D" uid="uid://o0janxmy2ggy" path="res://graphics/objects/toilet.png" id="2_qgu3b"]
 [ext_resource type="Texture2D" uid="uid://lniud42bplt" path="res://graphics/objects/lid.png" id="4_mrdsg"]
+[ext_resource type="Texture2D" uid="uid://b34xtclrtfqxr" path="res://graphics/lights/textures/circle.png" id="5_13t68"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4an36"]
 radius = 76.3217
@@ -24,3 +25,31 @@ texture = ExtResource("4_mrdsg")
 shape = SubResource("CircleShape2D_4an36")
 
 [node name="Marker2D" type="Marker2D" parent="SpawnPositions" index="0"]
+
+[node name="Label" type="Label" parent="." index="5"]
+visible = false
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.75
+offset_top = -75.0
+offset_right = 93.25
+offset_bottom = 26.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 23
+text = "Press E to open"
+uppercase = true
+
+[node name="Output" parent="." index="6"]
+visible = false
+
+[node name="Sprite2D" type="Sprite2D" parent="Output" index="0"]
+self_modulate = Color(1, 0, 0, 1)
+position = Vector2(-1, 110)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("5_13t68")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
