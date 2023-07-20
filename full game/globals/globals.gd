@@ -2,6 +2,8 @@ extends Node
 
 signal stat_change
 
+var fullscreenmapactive : bool = false
+
 var player_hit_sound: AudioStreamPlayer2D
 
 var laser_amount = 20:
@@ -37,3 +39,8 @@ func _ready():
 	player_hit_sound = AudioStreamPlayer2D.new()
 	player_hit_sound.stream = load("res://audio/solid_impact.ogg")
 	add_child(player_hit_sound)
+
+func _input(_event):
+	if Input.is_action_just_pressed("SwitchFullScreenMap"):
+		fullscreenmapactive = !fullscreenmapactive
+		print(get_viewport().content_scale_size)
