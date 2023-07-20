@@ -83,3 +83,40 @@ layout_mode = 2
 value = 80.0
 texture_under = ExtResource("4_l31md")
 texture_progress = ExtResource("5_rbyup")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="TextureRectMinimap" type="TextureRect" parent="Control"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -410.0
+offset_top = -250.0
+offset_right = -10.0
+offset_bottom = 6.0
+grow_horizontal = 0
+grow_vertical = 0
+expand_mode = 2
+stretch_mode = 4
+
+[node name="SubViewport" type="SubViewport" parent="."]
+disable_3d = true
+size = Vector2i(256, 256)
+render_target_update_mode = 3
+
+[node name="Camera2DMinimap" type="Camera2D" parent="SubViewport"]
+unique_name_in_owner = true
+zoom = Vector2(0.3, 0.3)
