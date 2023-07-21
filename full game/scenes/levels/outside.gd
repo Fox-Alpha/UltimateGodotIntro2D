@@ -2,7 +2,7 @@ extends LevelParent
 
 @onready var gamecam : Camera2D = get_viewport().get_camera_2d()
 
-func _process(delta):
+func _process(_delta):
 		if !Globals.fullscreenmapactive:
 			gamecam.zoom = Vector2(0.6, 0.6)
 			gamecam.global_position = gamecam.get_parent().global_position
