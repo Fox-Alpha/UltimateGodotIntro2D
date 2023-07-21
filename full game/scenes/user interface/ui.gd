@@ -15,7 +15,7 @@ var currcam : Camera2D
 @onready var minimap := %TextureRectMinimap
 @onready var cam2dmap : Camera2D = %Camera2DMinimap
 @onready var sub_viewport = $SubViewport
-@onready var vp = get_viewport()
+@onready var vp : Viewport = get_viewport()
 @onready var vpsize : Vector2 = vp.get_visible_rect().size
 @onready var tilemap : TileMap = get_parent().get_node("Ground/TileMap")
 
@@ -46,7 +46,10 @@ func _process(_delta):
 		gamecam.zoom = Vector2(0.6, 0.6)
 		gamecam.global_position = Vector2(0,0) # get_parent().get_node("Ground").global_position
 		vp.content_scale_size = tilemap.get_used_rect().size * tilemap.tile_set.tile_size
-		vp.size = vpsize
+		
+#		vp.size = vpsize
+#		vp.size_2d_override = Vector2i(vpsize)
+#		vp.size_2d_override_stretch = true
 #		vp.size = tilemap.get_used_rect().size * tilemap.tile_set.tile_size
 	else:
 		vp.content_scale_size = vpsize
